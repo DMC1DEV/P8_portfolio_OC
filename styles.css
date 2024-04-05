@@ -44,6 +44,9 @@ i {
     }
 }
 
+.zoom-on-load {
+    animation: zoomIn 3s ease forwards;
+}
 
 /******************** Grid settings ********************/
 
@@ -55,7 +58,6 @@ i {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    animation: zoomIn 3s ease forwards;
 }
 
 .grid-item {
@@ -86,7 +88,6 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 .grid-item-1 .grid-content {
@@ -118,7 +119,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    animation: zoomIn 5s ease forwards;
 }
 
 .logo_frontend {
@@ -150,7 +150,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    animation: zoomIn 5s ease forwards;
 }
 
 .logo_backend {
@@ -185,7 +184,6 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 .grid-item-4::before {
@@ -225,7 +223,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 /******* Grid 6 *******/
@@ -234,7 +231,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 
@@ -244,7 +240,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 .grid-item-7 img {
@@ -257,7 +252,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 /******* Grid 9 *******/
@@ -266,7 +260,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 /******* Grid 10 *******/
@@ -275,7 +268,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: zoomIn 5s ease forwards;
 }
 
 

@@ -32,16 +32,30 @@ i {
     margin: auto;
 }
 
-/****** Grid ******/
+@keyframes zoomIn {
+    from {
+        transform: scale(0.01);
+        opacity: 0.1;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/******************** Grid settings ********************/
 
 .grid-container {
-    max-width: 1200px;
-    min-width: 1200px;
-    min-height: 700px;
+    max-width: 1300px;
+    min-width: 1300px;
+    min-height: 800px;
     margin: 16px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    animation: zoomIn 3s ease forwards;
 }
 
 .grid-item {
@@ -50,7 +64,7 @@ i {
     text-align: center;
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     transition: transform 500ms ease, background-color 2s ease;
@@ -63,44 +77,219 @@ i {
     transform: scale(1.05);
 }
 
+/******************** Grid items ********************/
+
+/****** Grid 1 ******/
+
 .grid-item-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: zoomIn 5s ease forwards;
 }
 
 .grid-item-1 .grid-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     gap: 30px;
+    text-align: justify;
+}
+
+.grid-content .content_logo_title {
+    display: flex;
 }
 
 .grid-item-1 img {
+    width: 25%;
+    border-radius: 90%;
     transition: transform 500ms ease, background-color 2s ease;
 }
 
 .grid-item-1 img:hover {
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
+    transform: scale(1.2);
+}
+
+/****** Grid 2 ******/
+
+.grid-item-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: zoomIn 5s ease forwards;
+}
+
+.logo_frontend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item-2 img {
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 500ms ease, background-color 2s ease;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.grid-item-2 img:hover {
+    cursor: pointer;
+    z-index: 11;
     transform: scale(1.5);
 }
 
-/****** Grid items list ******/
+/****** Grid 3 ******/
+
+.grid-item-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: zoomIn 5s ease forwards;
+}
+
+.logo_backend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item-3 img {
+    width: 75%;
+    border-radius: 10px;
+    transition: transform 500ms ease, background-color 2s ease;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.grid-item-3 img:hover {
+    cursor: pointer;
+    z-index: 11;
+    transform: scale(1.5);
+}
+
+/****** Grid 4 ******/
+
+.grid-item-4 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+.grid-item-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('assets/capture_ecran_Kasa_banner 1.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.grid-item-4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.8px);
+    z-index: 2;
+}
+
+.grid-item-4 h2 {
+    position: relative;
+    z-index: 3;
+    color: #6200EE;
+}
+
+/******* Grid 5 *******/
+
+.grid-item-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+/******* Grid 6 *******/
+
+.grid-item-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+
+/******* Grid 7 *******/
+
+.grid-item-7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+.grid-item-7 img {
+    width: 25%;
+}
+
+/******* Grid 8 *******/
+
+.grid-item-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+/******* Grid 9 *******/
+
+.grid-item-9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+/******* Grid 10 *******/
+
+.grid-item-10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 5s ease forwards;
+}
+
+
+
+/****************** Grid items sizing ********************/
 
 .grid-item:nth-child(1) {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
 }
 
-.grid-item:nth-child(1) img {
-    width: 20%;
-}
-
 .grid-item:nth-child(2) {
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 1/ span 2;
 }
 
 .grid-item:nth-child(3) {

@@ -23,14 +23,26 @@ h3 {
     background-color: rgb(63, 0, 122);
     background: linear-gradient(to right, #d0aeff 20%, #6200EE);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
     margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 26px;
 }
 
 i {
     font-size: 32px;
     margin: auto;
 }
+
+/* zoomin animation */
 
 @keyframes zoomIn {
     from {
@@ -51,13 +63,19 @@ i {
 /******************** Grid settings ********************/
 
 .grid-container {
-    max-width: 1300px;
-    min-width: 1300px;
-    min-height: 800px;
+    max-width: 1200px;
+    height: 700px;
     margin: 16px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-auto-columns: 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "box1 box1 box1 box1 box2 box2 box3 box3"
+        "box4 box4 box4 box4 box5 box5 box5 box5"
+        "box4 box4 box4 box4 box5 box5 box5 box5"
+        "box6 box6 box7 box7 box8 box8 box9 box9"
+        "box10 box11 box12 box13 box8 box8 box9 box9"
+    ;
 }
 
 .grid-item {
@@ -74,35 +92,44 @@ i {
 
 .grid-item:hover {
     cursor: pointer;
-    background-color: rgba(208, 174, 255, 0.548);
+    background-color: rgba(208, 174, 255, 0.31);
+    outline: 1px solid rgba(208, 174, 255, 0.744);
     z-index: 10;
     transform: scale(1.05);
 }
 
 /******************** Grid items ********************/
 
-/****** Grid 1 ******/
+/****** Grid item 1 ******/
 
 .grid-item-1 {
+    grid-area: box1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    text-align: justify;
+    padding: 20px;
+
 }
 
 .grid-item-1 .grid-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     text-align: justify;
 }
 
-.grid-content .content_logo_title {
+.grid-item-1 .content_logo_title {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
 
 .grid-item-1 img {
-    width: 25%;
+    width: 20%;
     border-radius: 90%;
     transition: transform 500ms ease, background-color 2s ease;
 }
@@ -113,9 +140,10 @@ i {
     transform: scale(1.2);
 }
 
-/****** Grid 2 ******/
+/****** Grid item 2 ******/
 
 .grid-item-2 {
+    grid-area: box2;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -141,12 +169,13 @@ i {
 .grid-item-2 img:hover {
     cursor: pointer;
     z-index: 11;
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
-/****** Grid 3 ******/
+/****** Grid item 3 ******/
 
 .grid-item-3 {
+    grid-area: box3;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -171,12 +200,13 @@ i {
 .grid-item-3 img:hover {
     cursor: pointer;
     z-index: 11;
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
-/****** Grid 4 ******/
+/****** Grid item 4 ******/
 
 .grid-item-4 {
+    grid-area: box4;
     position: relative;
     height: 100%;
     width: 100%;
@@ -217,109 +247,129 @@ i {
     color: #6200EE;
 }
 
-/******* Grid 5 *******/
+/******* Grid item 5 *******/
 
 .grid-item-5 {
+    grid-area: box5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/******* Grid 6 *******/
+/******* Grid item 6 *******/
 
 .grid-item-6 {
+    grid-area: box6;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 
-/******* Grid 7 *******/
+/******* Grid item 7 *******/
 
 .grid-item-7 {
+    grid-area: box7;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 20px;
+}
+
+.grid-item-7 {
+    grid-area: box7;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .grid-item-7 img {
-    width: 25%;
+    width: 20%;
 }
 
-/******* Grid 8 *******/
+/******* Grid item 8 *******/
 
 .grid-item-8 {
+    grid-area: box8;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
-/******* Grid 9 *******/
+.grid-item-8 img {
+    width: 50%;
+}
+
+/******* Grid item 9 *******/
 
 .grid-item-9 {
+    grid-area: box9;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-/******* Grid 10 *******/
+.grid-item-9 img {
+    width: 50%;
+}
+
+/******* Grid item 10 *******/
 
 .grid-item-10 {
+    grid-area: box10;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/******* Grid item 11 *******/
 
-
-/****************** Grid items sizing ********************/
-
-.grid-item:nth-child(1) {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+.grid-item-11 {
+    grid-area: box11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.grid-item:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1/ span 2;
+/******* Grid item 12 *******/
+
+.grid-item-12 {
+    grid-area: box12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.grid-item:nth-child(3) {
-    grid-column: 4;
-    grid-row: 1 / span 2;
+/******* Grid item 13 *******/
+
+.grid-item-13 {
+    grid-area: box13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.grid-item:nth-child(4) {
-    grid-column: 1;
-    grid-row: 3;
+/****************** Responsive ********************/
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            'box1 box2 box3'
+            'box4 box5 box6 box7'
+            'box8 box9 box10';
+    }
 }
 
-.grid-item:nth-child(5) {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.grid-item:nth-child(6) {
-    grid-column: 3;
-    grid-row: 3;
-}
-
-.grid-item:nth-child(7) {
-    grid-column: 4;
-    grid-row: 3;
-}
-
-.grid-item:nth-child(8) {
-    grid-column: 1 / span 2;
-    grid-row: 4;
-}
-
-.grid-item:nth-child(9) {
-    grid-column: 3 / span 2;
-    grid-row: 4;
-}
-
-.grid-item:nth-child(10) {
-    grid-column: 1 / span 4;
-    grid-row: 5;
+@media (max-width: 540px) {
+    .grid-container {
+        grid-template-areas:
+            'box1'
+            'box2'
+            'box3'
+            'box4'
+            'box5'
+            'box6'
+            'box7'
+            'box8'
+            'box9'
+            'box10';
+    }
 }

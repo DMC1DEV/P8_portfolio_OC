@@ -1,0 +1,16 @@
+{
+    "projets": [
+        {
+            "id": 1,
+            "title": "Intégration maquette HTML/CSS",
+            "description": "Voici la description de la maquette HTML/CSS.",
+            "link": "https://dmc1dev.github.io/OC_P2_DMC-DEV_Booki/"
+        },
+        {
+            "id": 2,
+            "title": "Création portfolio JavaScript",
+            "description": "Voici la description du portfolio JavaScript.",
+            "link": "https://dmc1dev.github.io/OC_P3_DMC-Dev_Portfolio_Sophie_Bluel/"
+        }
+    ]
+}

@@ -111,7 +111,6 @@ i {
     gap: 10px;
     text-align: justify;
     padding: 20px;
-
 }
 
 .grid-item-1 .grid-content {
@@ -351,15 +350,31 @@ i {
 
 @media (max-width: 768px) {
     .grid-container {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        height: 100%;
         grid-template-areas:
-            'box1 box2 box3'
-            'box4 box5 box6 box7'
-            'box8 box9 box10';
+            'box1 box1 box1 box1'
+            'box2 box2 box3 box3'
+            'box4 box4 box5 box5'
+            'box6 box6 box7 box7'
+            'box8 box8 box9 box9'
+            'box10 box11 box12 box13';
+    }
+
+    .grid-item-2 img,
+    .grid-item-3 img,
+    .grid-item-8 img,
+    .grid-item-9 img {
+        width: 50%;
     }
 }
 
 @media (max-width: 540px) {
     .grid-container {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        height: 100%;
         grid-template-areas:
             'box1'
             'box2'
@@ -370,6 +385,16 @@ i {
             'box7'
             'box8'
             'box9'
-            'box10';
+            'box10'
+            'box11'
+            'box12'
+            'box13';
+    }
+
+    .grid-item-2 img,
+    .grid-item-3 img,
+    .grid-item-8 img,
+    .grid-item-9 img {
+        width: 30%;
     }
 }

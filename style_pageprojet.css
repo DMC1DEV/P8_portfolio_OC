@@ -99,7 +99,7 @@ i {
     min-width: 300px;
     margin: 50px;
     background-color: rgb(255, 255, 255);
-    padding: 50px;
+    padding: 100px;
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -122,7 +122,7 @@ i {
     display: block;
     max-width: 100%;
     margin: auto;
-    max-height: 500px;
+    max-height: 400px;
 }
 
 /* Pour les tablettes et écrans moyennement grands */
@@ -130,7 +130,7 @@ i {
     #project-details {
         max-width: 100%;
         height: auto;
-        padding: 20px;
+        padding: 50px;
         flex-direction: column;
         align-items: center;
     }

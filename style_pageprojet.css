@@ -15,6 +15,7 @@ body {
 
 p {
     font-size: 16px;
+    text-align: justify;
 }
 
 h1,
@@ -59,7 +60,7 @@ i {
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    gap: 50px;
+    gap: 30px;
     animation: zoomIn 2s ease forwards;
 }
 
@@ -76,7 +77,6 @@ i {
     text-align: center;
     cursor: pointer;
     transition: transform 500ms ease, background-color 500ms ease;
-    /* Assurez-vous que transform est inclus dans la transition */
     outline: none;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -84,7 +84,6 @@ i {
 #project-details div a:hover {
     background-color: #c59ffa;
     transform: scale(1.1);
-    /* Ajustez la valeur si nécessaire pour voir l'effet */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,10 +97,9 @@ i {
 #project-details {
     max-width: 2400px;
     min-width: 300px;
-    height: 700px;
-    margin: 20px;
+    margin: 50px;
     background-color: rgb(255, 255, 255);
-    padding: 8px 16px;
+    padding: 50px;
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -118,6 +116,13 @@ i {
     outline: 1px solid rgba(208, 174, 255, 0.744);
     z-index: 10;
     transform: scale(1.05);
+}
+
+#project-details img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    max-height: 500px;
 }
 
 /* Pour les tablettes et écrans moyennement grands */

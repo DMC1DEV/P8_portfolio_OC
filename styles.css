@@ -46,7 +46,7 @@ i {
 
 @keyframes zoomIn {
     from {
-        transform: scale(0.01);
+        transform: scale(0.5);
         opacity: 0.1;
     }
 
@@ -57,13 +57,14 @@ i {
 }
 
 .zoom-on-load {
-    animation: zoomIn 3s ease forwards;
+    animation: zoomIn 2s ease forwards;
 }
 
 /******************** Grid settings ********************/
 
 .grid-container {
     max-width: 1200px;
+    min-width: 300px;
     height: 700px;
     margin: 16px;
     display: grid;
@@ -91,11 +92,14 @@ i {
 }
 
 .grid-item:hover {
-    cursor: pointer;
     background-color: rgba(208, 174, 255, 0.31);
     outline: 1px solid rgba(208, 174, 255, 0.744);
     z-index: 10;
     transform: scale(1.05);
+}
+
+.grid-item a {
+    cursor: pointer;
 }
 
 /******************** Grid items ********************/
@@ -206,44 +210,19 @@ i {
 
 .grid-item-4 {
     grid-area: box4;
-    position: relative;
-    height: 100%;
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.grid-item-4::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assets/capture_ecran_Kasa_banner 1.jpg');
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-}
-
-.grid-item-4::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(0.8px);
-    z-index: 2;
-}
-
 .grid-item-4 h2 {
-    position: relative;
-    z-index: 3;
-    color: #6200EE;
+    background-color: rgb(63, 0, 122);
+    background: linear-gradient(to right, #d0aeff 20%, #6dc7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin: auto;
 }
 
 /******* Grid item 5 *******/
@@ -254,6 +233,17 @@ i {
     align-items: center;
     justify-content: center;
 }
+
+.grid-item-5 h2 {
+    background-color: rgb(63, 0, 122);
+    background: linear-gradient(to right, #d0aeff 20%, #6dc7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin: auto;
+}
+
 
 /******* Grid item 6 *******/
 

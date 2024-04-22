@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Ajout d'une classe pour l'animation de zoom
+    // Animation de zoom
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(item => {
         item.classList.add('zoom-on-load');
@@ -7,14 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.remove('zoom-on-load');
         });
 
-        // Gestion du clic pour rediriger ou charger dynamiquement le contenu
+        // Gestion du clic
         item.addEventListener('click', () => {
             const projectId = item.getAttribute('data-project-id');
             if (projectId) {
-                // Redirige vers la page projet avec l'ID du projet en paramètre de requête dans l'URL
-                window.location.href = `pages/page_projet.html?id=${projectId}`;
+                // Ouvre la page projet dans un nouvel onglet avec l'ID du projet en paramètre de requête dans l'URL
+                window.open(`pages/page_projet.html?id=${projectId}`, '_blank');
             }
         });
+
     });
 });
 

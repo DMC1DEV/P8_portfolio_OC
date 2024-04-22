@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const project = data.projets.find(p => p.id === parseInt(projectId));
             if (project) {
                 renderProjectDetails(project);
+                updatePageTitle(project.title);
             } else {
                 // Gestion erreur si projet introuvable
                 console.error('Projet non trouvé.');
@@ -28,4 +29,8 @@ function renderProjectDetails(project) {
             </div>
         `;
     }
+}
+
+function updatePageTitle(title) {
+    document.title = title;
 }
